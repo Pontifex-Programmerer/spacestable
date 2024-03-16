@@ -1,0 +1,86 @@
+#stable {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 85ch;
+    font-size: 1.5rem;
+
+}
+
+body {
+    background-color: black;
+    background-image: url("/background/cosmos.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    color: rgb(254, 254, 172);
+}
+
+#hacker-id {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 6rem;
+}
+#hacker-id h1{
+    font-size: 4rem;
+}
+#hacker-id img {
+    margin-top: 4rem;
+    color: aliceblue;
+    border-radius: 50%;
+    box-shadow: 0 0 100px 15px;
+    width: 100%;
+}
+#stable h1 {
+    text-align: center;
+}
+
+#stable img {
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#stable > * {
+    width: 100%;
+}
+
+#booths {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+}
+
+.ponycard {
+    background-color: rgb(222, 62, 88);
+    border-radius: 5%;
+    width: 30%;
+    margin: 1%;
+    padding: 0;
+}
+
+.ponycard img{
+    border-radius: 5%;
+    margin: 3% 3%;
+    width: 94%;
+}
+
+.quest {
+    color:rgba(179, 232, 252, 0.912) ;
+    background-color: rgba(1, 74, 74, 0.831);
+    padding: 5%;
+    border: 5px solid ;
+    box-shadow: 0 0 20px 10px;
+    margin: 10rem auto;
+}
+
+.message {
+    color:rgba(190, 252, 179, 0.912) ;
+    background-color: rgba(2, 117, 37, 0.831);
+    padding: 5%;
+    border: 5px solid ;
+    box-shadow: 0 0 20px 10px;
+}
