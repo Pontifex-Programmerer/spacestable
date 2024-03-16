@@ -1,0 +1,51 @@
+<%-include('./partials/head')%>
+<div id="stable">
+    
+    <!--this is not a stable unless its in working order! -->
+    <% let stable=false; %> 
+    <%if(typeof hackerid !== 'undefined' && typeof hackerimageurl!=='undefined'){ %>
+        <% stable=true; %>
+    <% } %>
+    <section id="hacker-id">
+        <% if(typeof(hackerid)==='undefined') { %>
+            <h1>This stable is not stable!</h1>
+            <% alttext="This stable is unstable because it has no owner, but the image of the owner will hang here later on!" %>
+        <% } else { %>
+            <h1><%=hackerid%> spacestable</h1>
+            <% alttext="This is an image of the owner of this stable,"+ hackerid %>
+        <% } %>
+        <%if(typeof hackerimageurl !=='undefined'){%>
+            <img src="<%=hackerimageurl%>" title="The owner of the stable" alt="<%=alttext%>">
+        <%} else { %>
+            <p class="quest">
+                you should put up an image of yourself to make sure this is a stable environment!
+            </p>
+        <% } %>
+    </section>
+    <section id="booths">
+        <%if(typeof(ponylist)!=='undefined' && ponylist.length > 0) { %>
+            <% for(pony of ponylist) { %>
+                <div class="ponycard">
+                    <h1><%=pony.name%></h1>
+                    <img src="<%=pony.imgurl%>" alt="<%=pony.alt%>">
+                </div>
+            <% } %>
+        <% } else { %>
+            <% if(!stable) { %>
+                <p class="message">
+                    Looking through the barn door, you see something that could have been a nice stable for spaceponies, given that it was stable.
+                    You should probaly focus on building a stable environment for now!
+                </p>
+            <% } else { %>
+                <p class="quest">
+                    Great! You have created a stable environment! Congratulations. Now go get some of those spaceponies!
+                    <hr>
+                    You have no ponies yet! wget the first one querying the vortex itself for bronze-pony! When you find Bronze-pony,
+                    you should create a fold for them on the root and call the fold stable! Now check your stable stable and see if
+                    Bronze-pony isnt having a good time!                 
+                </p>
+            <% } %>
+        <% } %>
+    </section>
+</div>
+<%- include('./partials/footer') %>
