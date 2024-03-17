@@ -15,11 +15,27 @@
             <% alttext="This is an image of the owner of this stable,"+ hackerid %>
         <% } %>
         <%if(typeof hackerimageurl !=='undefined'){%>
+            <% console.log('Rendering ' + hackerimageurl)%>
             <img src="<%=hackerimageurl%>" title="The owner of the stable" alt="<%=alttext%>">
         <%} else { %>
-            <p class="quest">
-                you should put up an image of yourself to make sure this is a stable environment!
-            </p>
+            <section class="quest">
+                <h1>Quest 3</h1>
+                <p>
+                    Congratulations on deploying a stable machine! Now lets make a stable build too! 
+                </p>
+                    <hr>
+                <p>
+                    To move on, you have to enter the vortex! vortex is a host in the domain of ikt-fag.no, and you have a home there, 
+                    I promise! In your home, you can find the reflection of your true self! Bring that reflection back to your stable
+                    by any means, and make sure that you put it in the home folder of your stable node. Then you can start 
+                    collecting space ponies!
+                </p>
+                <hr>
+                <p>
+                    You don't have to be a turtle to travel to the vortex, but wearing a secure shell sure helps! All you need to do is 
+                    to take on your hacker identity and travel! As a true hacker, i'm sure you will have no problem hacking your way in!
+                </p>
+            </section>
         <% } %>
     </section>
     <section id="booths">
@@ -37,13 +53,17 @@
                     You should probaly focus on building a stable environment for now!
                 </p>
             <% } else { %>
-                <p class="quest">
-                    Great! You have created a stable environment! Congratulations. Now go get some of those spaceponies!
+                <section class="quest">
+                    <p>
+                        Great! You have created a stable environment! Congratulations. Now go get some of those spaceponies!
+                    </p>
                     <hr>
-                    You have no ponies yet! wget the first one querying the vortex itself for bronze-pony! When you find Bronze-pony,
-                    you should create a fold for them on the root and call the fold stable! Now check your stable stable and see if
-                    Bronze-pony isnt having a good time!                 
-                </p>
+                    <p>
+                        You have no ponies yet! wget the first one querying the vortex itself for bronze-pony! When you find Bronze-pony,
+                        you should create a fold for them on the root and call the fold stable! Now check your stable stable and see if
+                        Bronze-pony isnt having a good time!                 
+                    </p>
+                </section>
             <% } %>
         <% } %>
     </section>
